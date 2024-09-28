@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // redirect to draw.html if screen width is greater than 1024px, otherwise to error.html
   function updateLink() {
     if (window.innerWidth > 1024) {
-      tryNowLink.href = "/draw";
+      tryNowLink.href = "./draw.html";
     } else {
-      tryNowLink.href = "/error";
+      tryNowLink.href = "./error.html";
     }
   }
   updateLink();
