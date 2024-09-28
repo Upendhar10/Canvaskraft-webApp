@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/draw", "destination": "/draw.html" },
+    { "source": "/error", "destination": "/error.html" }
+  ],
+  "cleanUrls": true
+}
