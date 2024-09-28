@@ -1,0 +1,357 @@
+/* Universal styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+.home {
+  height: 100vh;
+  background: #283048; /* fallback for old browsers */
+  background: linear-gradient(
+    to right,
+    #859398,
+    #283048
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  display: grid;
+  gap: 2rem;
+  place-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Home - Header */
+
+header {
+  margin-top: 2rem;
+}
+
+header .title {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+  margin: 15px;
+}
+
+header .title-description {
+  font-size: 1.25rem;
+  line-height: 2;
+  max-width: 70vw;
+  text-align: center;
+}
+
+header .nav-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 3rem;
+}
+
+header .nav-btn {
+  padding: 0.75rem;
+  border: 1px solid white;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  min-width: 150px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header .nav-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Home - techstack */
+
+main {
+  margin: 1.5rem;
+}
+
+main .techstack-title {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+main .techstack-list {
+  margin: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main .techstack-list > li {
+  list-style-type: none;
+  font-size: 1.2rem;
+  border: 1px dashed #b1babe;
+  padding: 5px 20px;
+  border-radius: 5px;
+}
+
+/* Home - footer */
+
+footer .copyright-link {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* Draw - Limitations */
+
+.Error {
+  display: none;
+
+  color: white;
+  font-size: 1.5rem;
+
+  place-content: center;
+  margin: auto;
+  height: 100%;
+  width: 75%;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 3;
+  font-weight: bold;
+}
+
+.Error span {
+  color: red;
+  background: white;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+
+/* Draw - Menu-cont */
+
+.draw {
+  background: black;
+}
+
+.draw .Menu-cont {
+  background: #f9f9f9;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #000;
+
+  display: grid;
+  place-content: center;
+
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  cursor: pointer;
+}
+
+/* draw - tools-cont */
+
+.draw .tools-cont {
+  /* width: 10rem; */
+  background: #f9f9f9;
+  border-radius: 3px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  max-height: 3.5rem;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  place-content: center;
+  gap: 2rem;
+
+  position: absolute;
+  left: 35%;
+  top: 2rem;
+  cursor: pointer;
+}
+
+.tools-cont i {
+  display: block;
+  font-size: 1.75rem;
+  padding: 0.3rem;
+}
+
+.pencil-tool-cont {
+  position: absolute;
+  left: 3rem;
+  top: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 3px;
+}
+
+.pencil-tool-cont .pencil-width-cont {
+  width: 8rem;
+}
+
+.pencil-tool-cont .pencil-color-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pencil-color-cont .pencil-color {
+  height: 1.5rem;
+  border-radius: 3px;
+  border: 0.5px solid black;
+}
+
+.pencil-color-cont #red {
+  background-color: red;
+  width: 1rem;
+}
+
+.pencil-color-cont #blue {
+  background-color: blue;
+  width: 1rem;
+}
+
+.pencil-color-cont #white {
+  background-color: #fff;
+  width: 1rem;
+}
+.pencil-color-cont #green {
+  background-color: green;
+  width: 1rem;
+}
+.pencil-color-cont #yellow {
+  background-color: yellow;
+  width: 1rem;
+}
+.pencil-color-cont #pink {
+  background-color: pink;
+  width: 1rem;
+}
+
+.eraser-tool-cont {
+  position: absolute;
+  left: 3rem;
+  top: 16rem;
+
+  display: flex;
+
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 3px;
+
+  /* transform: rotate(270deg); */
+}
+
+.toolsContAnim {
+  animation-name: scaleToolsCont;
+  animation-duration: 0.5s;
+}
+
+@keyframes scaleToolsCont {
+  0% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/* Sticky Notes */
+
+.sticky-cont {
+  height: 15rem;
+  width: 15rem;
+
+  position: absolute;
+  left: 20rem;
+  top: 10rem;
+
+  border-radius: 3px;
+}
+
+.sticky-cont .sticky-header-cont {
+  height: 1.5rem;
+  background-color: rgb(215, 213, 213);
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0.6rem;
+}
+
+.sticky-header-cont > * {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.sticky-header-cont .remove {
+  background-color: red;
+}
+
+.sticky-header-cont .minimize {
+  background-color: lightgreen;
+}
+
+.sticky-cont .sticky-body-cont {
+  height: calc(100% - 2rem);
+  /* background-color: pink; */
+}
+
+.sticky-body-cont textarea {
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border: none;
+  outline: none;
+  color: #222020;
+}
+
+.sticky-body-cont #ImgUpload {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+/* --------------------------------------------------------------------- */
+
+canvas {
+  overflow: hidden;
+}
+
+/* --------------------------------------------------------------------- */
+
+/* # Media queries */
+
+@media (max-width: 1279px) {
+  body .Menu-cont {
+    display: none;
+  }
+
+  body .tools-cont {
+    display: none;
+  }
+
+  .Error {
+    display: grid;
+    color: white;
+    background: #212121;
+  }
+  header .title-description {
+    text-align: center;
+    max-width: 600px;
+    margin-left: 8rem;
+  }
+}
