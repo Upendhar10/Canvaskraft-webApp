@@ -7,9 +7,23 @@
   box-sizing: border-box;
 }
 
+.page {
+  position: absolute; /* Make sure pages stack correctly */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible; /* Ensure content is not clipped */
+}
+
+.page.active {
+  display: block; /* Only active page is shown */
+  z-index: 1; /* Ensure active page is on top */
+}
+
 /* ------------------------------------------------------------------------------------------------- */
 
-.home {
+#home {
   height: 100vh;
   background: #283048; /* fallback for old browsers */
   background: linear-gradient(
@@ -62,6 +76,7 @@ header .nav-btn {
   color: aliceblue;
   text-decoration: none;
   font-weight: 500;
+  cursor: pointer;
 }
 
 header .nav-btn:hover {
@@ -107,7 +122,7 @@ footer .copyright-link {
 
 /* Draw - Limitations */
 
-.Error {
+#error {
   display: none;
 
   color: white;
@@ -122,7 +137,7 @@ footer .copyright-link {
   font-weight: bold;
 }
 
-.Error span {
+#error span {
   color: red;
   background: white;
   padding: 0.3rem;
@@ -131,11 +146,11 @@ footer .copyright-link {
 
 /* Draw - Menu-cont */
 
-.draw {
+#draw {
   background: black;
 }
 
-.draw .Menu-cont {
+#draw .Menu-cont {
   background: #f9f9f9;
   height: 3rem;
   width: 3rem;
@@ -155,7 +170,7 @@ footer .copyright-link {
 
 /* draw - tools-cont */
 
-.draw .tools-cont {
+#draw .tools-cont {
   /* width: 10rem; */
   background: #f9f9f9;
   border-radius: 3px;
@@ -269,14 +284,13 @@ footer .copyright-link {
 /* Sticky Notes */
 
 .sticky-cont {
-  height: 15rem;
-  width: 15rem;
-
   position: absolute;
   left: 20rem;
   top: 10rem;
-
+  width: 15rem;
+  height: 15rem;
   border-radius: 3px;
+  z-index: 100; /* Ensure it's above other elements */
 }
 
 .sticky-cont .sticky-header-cont {
@@ -344,7 +358,7 @@ canvas {
     display: none;
   }
 
-  .Error {
+  #error {
     display: grid;
     color: white;
     background: #212121;

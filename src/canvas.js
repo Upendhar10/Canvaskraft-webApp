@@ -82,7 +82,6 @@ document.querySelector("#pencil").addEventListener("click", () => {
 });
 
 // store the data written on the board in the form of urls in an array
-
 export function saveState() {
   undoHistory.push(canvas.toDataURL());
   redoHistory = [];

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvaskraft</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- Home Page -->
+    <section id="home" class="page active">
+      <header>
+        <div class="title-cont">
+          <h1 class="title">Canvaskraft</h1>
+          <div class="title-description">
+            <p>
+              Transform your ideas into vibrant masterpieces. Visualize your
+              ideas, make sketches, undo, redo, and download your work, all
+              within a single robust web app!
+            </p>
+          </div>
+          <div class="nav-btns">
+            <span id="try-now-link" class="nav-btn">
+              Try Now <i class="ri-arrow-right-line"></i>
+            </span>
+            <a
+              href="https://github.com/Upendhar10/Canvaskraft-webApp"
+              class="nav-btn"
+              target="_blank"
+            >
+              Contribute
+              <i class="ri-arrow-right-up-line"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="techstack">
+          <h3 class="techstack-title">Techstack</h3>
+          <ul class="techstack-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javasript</li>
+            <li>Canvas</li>
+            <li>Vite</li>
+          </ul>
+        </div>
+      </main>
+      <footer>
+        <div class="copyright">
+          <p class="copyright-link">© Nemmani Upendhar | Canvaskraft 2024</p>
+        </div>
+      </footer>
+    </section>
+
+    <!-- draw page -->
+    <section id="draw" class="page">
+      <!-- # Menu container -->
+      <div class="Menu-cont">
+        <i class="ri-menu-4-line bars"></i>
+        <!-- <i class="ri-close-large-fill cross"></i> -->
+      </div>
+
+      <!-- # Tools Container -->
+      <div class="tools-cont toolsContAnim">
+        <i class="ri-pencil-fill" title="pencil" id="pencil"></i>
+        <i class="ri-eraser-fill" title="eraser" id="eraser"></i>
+        <i
+          class="ri-sticky-note-add-fill"
+          title="stickyNotes"
+          id="stickyNotes"
+        ></i>
+        <i class="ri-export-fill" title="upload" id="UploadImg"></i>
+        <i class="ri-arrow-go-back-line" title="undo" id="undo"></i>
+        <i class="ri-import-fill" title="download" id="download"></i>
+        <i class="ri-arrow-go-forward-line" title="redo" id="redo"></i>
+      </div>
+
+      <div class="pencil-tool-cont">
+        <div class="pencil-width-cont">
+          <input type="range" min="2" max="10" value="3" id="pencil-width" />
+        </div>
+        <div class="pencil-color-cont">
+          <div class="pencil-color" id="red"></div>
+          <div class="pencil-color" id="blue"></div>
+          <div class="pencil-color" id="white"></div>
+          <div class="pencil-color" id="green"></div>
+          <div class="pencil-color" id="yellow"></div>
+          <div class="pencil-color" id="pink"></div>
+        </div>
+      </div>
+
+      <div class="eraser-tool-cont">
+        <div class="eraser-width-cont">
+          <input type="range" min="2" max="10" value="3" id="eraser-width" />
+        </div>
+      </div>
+
+      <canvas></canvas>
+    </section>
+
+    <!-- Error Page -->
+
+    <section id="error" class="page">
+      <div>
+        <p>
+          This application is designed <span>Exclusivly</span> for Desktops and
+          Laptops
+        </p>
+        <p>Please try with Desktop or PC</p>
+        <p>Thank you.</p>
+      </div>
+    </section>
+
+    <!-- CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+    <!-- script.js -->
+    <script type="module" src="./src/index.js"></script>
+    <script type="module" src="./src/tools.js"></script>
+    <script type="module" src="./src/canvas.js"></script>
+  </body>
+</html>
